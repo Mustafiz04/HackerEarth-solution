@@ -1,7 +1,6 @@
 
 import java.util.*;
 class TestClass {
-    
     int sort(int arr[]){
        int total = 0;
        int len = arr.length;

@@ -1,56 +1,55 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
+
 
 class Subarray{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
     
-        int t = sc.nextInt();
+        int T = sc.nextInt();
     
-        for (int i = 0; i < t; i++) {
+        for (int i = 0; i < T; i++) {
             int n = sc.nextInt();
             int s = sc.nextInt();
     
-            int[] m = new int[n];
+            int[] arr = new int[n];
             for (int j = 0; j < n; j++) {
-                m[j] = sc.nextInt();
+                arr[j] = sc.nextInt();
             }
-            findSubArray(n, s, m);
+            findSubArray(n, s, arr);
         }
     }
     
-    private static void findSubArray(int n, int s, int[] m) {
-        int first = 0;
-        int last = 0;
+    private static void findSubArray(int n, int s, int[] arr) {
+        int f = 0;
+        int l = 0;
     
-        long result = m[first];
+        long totalSum = arr[f];
     
-        while (result != s) {
-            if (result > s) {
-                if (first == last) {
-                    last++;
-                    first++;
-                    if (last >= n) break;
-                    result = m[first];
+        while (totalSum != s) {
+            if (totalSum > s) {
+                if (f == l) {
+                    l++;
+                    f++;
+                    if (l >= n) break;
+                    totalSum = arr[f];
                 } else {
-                    result -= m[first];
-                    first++;
+                    totalSum -= arr[f];
+                    f++;
                 }
             } else {
-                last++;
-                if (last < n) {
-                    result += m[last];
+                l++;
+                if (l < n) {
+                    totalSum += arr[l];
                 } else {
                     break;
                 }
             }
         }
     
-        if (result != s) {
+        if (totalSum != s) {
             System.out.println(-1);
         } else {
-            System.out.println((first + 1) + " " + (last + 1));
+            System.out.println((f + 1) + " " + (l + 1));
         }
     }
 }

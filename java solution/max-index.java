@@ -19,17 +19,6 @@ class max{
 
     public static int maxIndex(int n , int[] arr){
         int max = 0;
-
-        // for(int i = 0; i < n-1; i++){
-        //     for(int j = i+1; j<n; j++){
-        //         if(arr[i] <= arr[j]){
-        //             int diff = j-i;
-        //             if(diff > max){
-        //                 max = diff;
-        //             }
-        //         }
-        //     }
-        // }
         int i = 0;
         while(i != n){
             for(int j = i+1; j<n; j++){

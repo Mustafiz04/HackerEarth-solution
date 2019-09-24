@@ -19,13 +19,24 @@ class Rotate{
     }
 
     public static void rotateArray(int[] arr, int n, int d){
-        int[] arr2 = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr2[i] = arr[d%n]; 
-            d++;
+        // int[] arr2 = new int[n];
+        // for (int i = 0; i < n; i++) {
+        //     arr2[i] = arr[d%n]; 
+        //     d++;
+        // }
+        // for (int i = 0; i < n; i++) {
+        //     System.out.print(arr2[i] + " ");            
+        // }
+        int temp;
+        for (int i = 0; i < d; i++) {
+           temp = arr[0];
+           for (int j = 0; j < n-1; j++) {
+               arr[j] = arr[j+1];
+           }
+           arr[n-1] = temp;
         }
         for (int i = 0; i < n; i++) {
-            System.out.print(arr2[i] + " ");            
+            System.out.print(arr[i] + " ");            
         }
     }
 

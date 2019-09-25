@@ -62,17 +62,18 @@ class Jumping{
 
 
 // class GFG { 
-//     public static void main(String args[]) {
-//         Scanner sc = new Scanner(System.in);
-//         int T = sc.nextInt();
-//         while(T-- > 0){
-//             System.out.print("0 "); 
-  
-//             for (int i = 1; i <= 9 && i <= x; i++) { 
-//                 this.bfs(num, i); 
-//             } 
-//         }
-//     }
+    // public static void main(String[] args) throws IOException 
+	// { 
+	// 	Scanner sc = new Scanner(System.in);
+    //     int T = sc.nextInt();
+    //     while(T-- > 0){
+    //         System.out.print("0 "); 
+    //         int x = sc.nextInt();
+    //     	GFG obj = new GFG();
+    //         obj.printJumping(x) ;
+    //     }
+
+	// }
  
 // 	public void bfs(int x, int num) 
 // 	{ 
@@ -106,14 +107,6 @@ class Jumping{
 // 		} 
 // 	} 
 
-// 	public void printJumping(int x) 
-// 	{ 
-// 		System.out.print("0 "); 
-
-// 		for (int i = 1; i <= 9 && i <= x; i++) { 
-// 			this.bfs(x, i); 
-// 		} 
-// 	} 
 
 
 // } 

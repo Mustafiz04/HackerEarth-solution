@@ -18,11 +18,26 @@ class GFG {
         }
     }
 	
-	public static void reverse(int[] arr, int n){
-	    for(int i = 0; i<n/2; i++){
-            int temp = arr[i];
-            arr[i] = arr[n-1-i];
-            arr[n-1-i] = temp;
+	// public static void reverse(int[] arr, int n){
+	//     for(int i = 0; i<n/2; i++){
+    //         int temp = arr[i];
+    //         arr[i] = arr[n-1-i];
+    //         arr[n-1-i] = temp;
+	//     }
+	//     for(int j = 0; j<n; j++){
+	//         System.out.print(arr[j] + " ");
+	//     }
+	//     System.out.println(" ");
+    // }
+    public static void reverse(int[] arr, int n){
+        int left = 0;
+        int right = n-1;
+	    while(left< right){
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
 	    }
 	    for(int j = 0; j<n; j++){
 	        System.out.print(arr[j] + " ");

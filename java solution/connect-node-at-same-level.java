@@ -26,8 +26,7 @@ class BinaryTree
 			p.left.nextRight = p.right; 
 
 		if (p.right != null) 
-			p.right.nextRight = (p.nextRight != null) ? 
-										p.nextRight.left : null; 
+			p.right.nextRight = (p.nextRight != null) ? p.nextRight.left : null; 
  
 		connectRecur(p.left); 
 		connectRecur(p.right); 

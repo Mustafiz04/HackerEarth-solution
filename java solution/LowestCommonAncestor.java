@@ -60,17 +60,35 @@ class BST_Lowest_Common_Ancestor{
 }
 
 class BST{   
+    // Node LCA(Node node, int n1, int n2) {
+    //     if(node == null){
+    //         return null;
+    //     }
+    //     if( node.data > n1 && node.data > n2 ){
+    //         return LCA(node.left, n1, n2);
+    //     }
+    //     if( node.data < n1 && node.data < n2 ){
+    //         return LCA(node.right, n1, n2);
+    //     }
+    //     return node;
+    // }
+
+
     Node LCA(Node node, int n1, int n2) {
-        if(node == null){
-            return null;
-        }
-        if( node.data >n1 && node.data > n2 ){
-            return LCA(node.left, n1, n2);
-        }
-        if( node.data < n1 && node.data < n2 ){
-            return LCA(node.right, n1, n2);
+        while(node != null){
+
+            if(node.data > n1 && node.data > n2){
+                node = node.left;
+            }else if(node.data < n1 && node.data < n2 ){
+                node = node.right;
+            }else{
+                break;
+            }
         }
         return node;
     }
+
+
+
     
 }

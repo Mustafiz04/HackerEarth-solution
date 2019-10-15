@@ -1,6 +1,7 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+
 class Node{
     int data;
     Node left;
@@ -32,7 +33,7 @@ class Is_Node__Present_In_BST{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         
-        int t  =sc.nextInt();
+        int t  = sc.nextInt();
         while(t>0){
             int n = sc.nextInt();
             Is_Node__Present_In_BST obj = new Is_Node__Present_In_BST();

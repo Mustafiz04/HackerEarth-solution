@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import java.util.*;
 
 
@@ -74,76 +73,4 @@ class List{
             System.out.println(l.sumLastN(m));
         }
     }
-
-=======
-import java.util.*;
-
-
-class List{
-
-    class Node{
-        int data;
-        Node next;
-
-        Node(int data){
-            this.data = data;
-            next = null;
-        }
-
-    }
-
-    Node head;
-
-
-    public void push(int data){
-        Node new_node = new Node(data);
-
-        new_node.next = head;
-        head = new_node;
-    }
-
-    public int count(){
-        Node temp = head;
-        int c = 0;
-        while(temp != null){
-            c++;
-            temp = temp.next;
-        }
-        return c;
-    }
-
-    public int sumLastN(int n){
-        Node temp = head;
-        int c = 0;
-        int len = count();
-        int s = 0;
-        while(temp != null){
-            if(s >= len - n){
-                c += temp.data;
-            }
-            s++;
-            temp = temp.next;
-        }
-
-        return c;
-    }
-
-
-
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        
-        while(T-- > 0){
-                int n = sc.nextInt();
-                int m = sc.nextInt();
-                List l = new List();
-                for(int i = 0; i<n; i++){
-                    l.push(sc.nextInt());                
-                }
-                System.out.println(l.count());
-        }
-    }
-
->>>>>>> 366dafd5b5dc1ecafc996d94ea1eeb0ac45229e6
 }

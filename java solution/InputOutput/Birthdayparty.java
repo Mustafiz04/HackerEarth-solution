@@ -8,7 +8,7 @@ class TestClass {
             String[] in = br.readLine().split(" ");
             int N = Integer.parseInt(in[0]);
             int M = Integer.parseInt(in[1]);
-            if(M%N == 0){
+            if(M % N == 0){
                 System.out.println("Yes");
             }else{
                 System.out.println("No");
@@ -16,3 +16,4 @@ class TestClass {
         }
     }
 }
+ 

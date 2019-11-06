@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Codesthaan",
+            "request": "launch",
+            "mainClass": "Codesthaan",
+            "projectName": "HackerEarth-solution_a6ade594"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestClass",
+            "request": "launch",
+            "mainClass": "InputOutput.TestClass",
+            "projectName": "HackerEarth-solution_a6ade594"
+        }
+    ]
+}

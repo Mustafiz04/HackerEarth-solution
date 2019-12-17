@@ -11,12 +11,11 @@
 */
 
 
-
+import java.util.*;
 class Test{
     public static void main(String args[]){
-        int n = 6;
-        
-
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
         for(int i = 0; i<= n; i++){
             int s = 1;
             for(int j =0; j<i+1; j+=2){

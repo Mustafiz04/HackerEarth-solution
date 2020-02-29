@@ -66,6 +66,7 @@ class Tree{
             }else{
                 return rd + 1;
             }
+            // return Math.max( height(node.left), height(node.right) ) + 1;
         }
     }   
 }

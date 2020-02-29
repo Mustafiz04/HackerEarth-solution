@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 class Node{
     int data;
     Node left,right;
@@ -8,8 +7,8 @@ class Node{
         left=right=null;
     }
 }
-class Sum {
-    public static void main (String[] args) {
+class SumOfLeft{
+    public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
         int t=sc.nextInt();
         while(t-->0){
@@ -33,7 +32,8 @@ class Sum {
                 }
             }
             GfG g=new GfG();
-            System.out.println(g.sumBT(root));
+            int ans=g.rightLeafSum(root);
+            System.out.println(ans);
         }
     }
     public static void insert(Node root,int a,int a1,char lr){
@@ -54,18 +54,23 @@ class Sum {
     }
 }
 
+
 class GfG{
-    
-    public int sumBT(Node root){
-        if(root == null){
+    int sum = 0;
+    public int rightLeafSum(Node root)
+    {
+        if( root == null ){
             return 0;
-        }else{
-            return root.data + sumBT(root.left) + sumBT(root.right);
         }
+        if(root.right != null){
+            if( root.right.left == null && root.right.right == null ){
+                sum += root.right.data;
+            }    
+        }
+        
+        rightLeafSum(root.left);
+        rightLeafSum(root.right);
+        
+        return sum;
     }
 }
-
-
-// inorder
-// left root right
-

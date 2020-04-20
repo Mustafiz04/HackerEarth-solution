@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Challenge",
+            "request": "launch",
+            "mainClass": "challenge.Challenge",
+            "projectName": "HackerEarth-solution_a6ade594"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - New",
+            "request": "launch",
+            "mainClass": "New",
+            "projectName": "HackerEarth-solution_a6ade594"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Challenge",
+            "request": "launch",
+            "mainClass": "Challenge",
+            "projectName": "HackerEarth-solution_a6ade594"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Codesthaan",
             "request": "launch",
             "mainClass": "Codesthaan",
